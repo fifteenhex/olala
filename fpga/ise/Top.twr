@@ -1,0 +1,583 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/home/daniel/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/trce -intstyle ise -v 3
+-s 2 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf top.ucf
+
+Design file:              Top.ncd
+Physical constraint file: Top.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "cpuclock" PERIOD = 80 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 8573 paths analyzed, 283 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.061ns.
+--------------------------------------------------------------------------------
+
+Paths for end point systemregisters_systickcounter_11 (SLICE_X8Y46.A1), 120 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.939ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_0 (FF)
+  Destination:          systemregisters_systickcounter_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.037ns (Levels of Logic = 4)
+  Clock Path Skew:      0.011ns (0.629 - 0.618)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_0 to systemregisters_systickcounter_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y42.AQ      Tcko                  0.476   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler_0
+    SLICE_X18Y42.A5      net (fanout=1)        0.405   systemregisters_systickprescaler<0>
+    SLICE_X18Y42.DMUX    Topad                 0.667   systemregisters_systickprescaler<3>
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_lut<0>_INV_0
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<3>
+    SLICE_X19Y42.B2      net (fanout=1)        1.223   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<3>
+    SLICE_X19Y42.B       Tilo                  0.259   systickint
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2
+    SLICE_X8Y44.A1       net (fanout=9)        1.454   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1
+    SLICE_X8Y44.A        Tilo                  0.254   systemregisters_systickcounter<2>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X8Y46.A1       net (fanout=17)       0.960   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X8Y46.CLK      Tas                   0.339   systemregisters_systickcounter<14>
+                                                       systemregisters_systickcounter_11_dpot
+                                                       systemregisters_systickcounter_11
+    -------------------------------------------------  ---------------------------
+    Total                                      6.037ns (1.995ns logic, 4.042ns route)
+                                                       (33.0% logic, 67.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.105ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_3 (FF)
+  Destination:          systemregisters_systickcounter_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.871ns (Levels of Logic = 4)
+  Clock Path Skew:      0.011ns (0.629 - 0.618)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_3 to systemregisters_systickcounter_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y42.DQ      Tcko                  0.476   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler_3
+    SLICE_X18Y42.D5      net (fanout=1)        0.460   systemregisters_systickprescaler<3>
+    SLICE_X18Y42.DMUX    Topdd                 0.446   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler<3>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<3>
+    SLICE_X19Y42.B2      net (fanout=1)        1.223   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<3>
+    SLICE_X19Y42.B       Tilo                  0.259   systickint
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2
+    SLICE_X8Y44.A1       net (fanout=9)        1.454   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1
+    SLICE_X8Y44.A        Tilo                  0.254   systemregisters_systickcounter<2>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X8Y46.A1       net (fanout=17)       0.960   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X8Y46.CLK      Tas                   0.339   systemregisters_systickcounter<14>
+                                                       systemregisters_systickcounter_11_dpot
+                                                       systemregisters_systickcounter_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.871ns (1.774ns logic, 4.097ns route)
+                                                       (30.2% logic, 69.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.130ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_1 (FF)
+  Destination:          systemregisters_systickcounter_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.846ns (Levels of Logic = 4)
+  Clock Path Skew:      0.011ns (0.629 - 0.618)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_1 to systemregisters_systickcounter_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y42.BQ      Tcko                  0.476   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler_1
+    SLICE_X18Y42.B5      net (fanout=1)        0.237   systemregisters_systickprescaler<1>
+    SLICE_X18Y42.DMUX    Topbd                 0.644   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler<1>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<3>
+    SLICE_X19Y42.B2      net (fanout=1)        1.223   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<3>
+    SLICE_X19Y42.B       Tilo                  0.259   systickint
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2
+    SLICE_X8Y44.A1       net (fanout=9)        1.454   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1
+    SLICE_X8Y44.A        Tilo                  0.254   systemregisters_systickcounter<2>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X8Y46.A1       net (fanout=17)       0.960   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X8Y46.CLK      Tas                   0.339   systemregisters_systickcounter<14>
+                                                       systemregisters_systickcounter_11_dpot
+                                                       systemregisters_systickcounter_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.846ns (1.972ns logic, 3.874ns route)
+                                                       (33.7% logic, 66.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point systemregisters_systickcounter_8 (SLICE_X11Y45.B1), 120 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.056ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_0 (FF)
+  Destination:          systemregisters_systickcounter_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.919ns (Levels of Logic = 4)
+  Clock Path Skew:      0.010ns (0.628 - 0.618)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_0 to systemregisters_systickcounter_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y42.AQ      Tcko                  0.476   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler_0
+    SLICE_X18Y42.A5      net (fanout=1)        0.405   systemregisters_systickprescaler<0>
+    SLICE_X18Y42.DMUX    Topad                 0.667   systemregisters_systickprescaler<3>
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_lut<0>_INV_0
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<3>
+    SLICE_X19Y42.B2      net (fanout=1)        1.223   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<3>
+    SLICE_X19Y42.B       Tilo                  0.259   systickint
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2
+    SLICE_X8Y44.A1       net (fanout=9)        1.454   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1
+    SLICE_X8Y44.A        Tilo                  0.254   systemregisters_systickcounter<2>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X11Y45.B1      net (fanout=17)       0.808   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X11Y45.CLK     Tas                   0.373   systemregisters_systickcounter<10>
+                                                       systemregisters_systickcounter_8_dpot
+                                                       systemregisters_systickcounter_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.919ns (2.029ns logic, 3.890ns route)
+                                                       (34.3% logic, 65.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.222ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_3 (FF)
+  Destination:          systemregisters_systickcounter_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.753ns (Levels of Logic = 4)
+  Clock Path Skew:      0.010ns (0.628 - 0.618)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_3 to systemregisters_systickcounter_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y42.DQ      Tcko                  0.476   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler_3
+    SLICE_X18Y42.D5      net (fanout=1)        0.460   systemregisters_systickprescaler<3>
+    SLICE_X18Y42.DMUX    Topdd                 0.446   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler<3>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<3>
+    SLICE_X19Y42.B2      net (fanout=1)        1.223   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<3>
+    SLICE_X19Y42.B       Tilo                  0.259   systickint
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2
+    SLICE_X8Y44.A1       net (fanout=9)        1.454   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1
+    SLICE_X8Y44.A        Tilo                  0.254   systemregisters_systickcounter<2>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X11Y45.B1      net (fanout=17)       0.808   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X11Y45.CLK     Tas                   0.373   systemregisters_systickcounter<10>
+                                                       systemregisters_systickcounter_8_dpot
+                                                       systemregisters_systickcounter_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.753ns (1.808ns logic, 3.945ns route)
+                                                       (31.4% logic, 68.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.247ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_1 (FF)
+  Destination:          systemregisters_systickcounter_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.728ns (Levels of Logic = 4)
+  Clock Path Skew:      0.010ns (0.628 - 0.618)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_1 to systemregisters_systickcounter_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y42.BQ      Tcko                  0.476   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler_1
+    SLICE_X18Y42.B5      net (fanout=1)        0.237   systemregisters_systickprescaler<1>
+    SLICE_X18Y42.DMUX    Topbd                 0.644   systemregisters_systickprescaler<3>
+                                                       systemregisters_systickprescaler<1>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<3>
+    SLICE_X19Y42.B2      net (fanout=1)        1.223   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<3>
+    SLICE_X19Y42.B       Tilo                  0.259   systickint
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2
+    SLICE_X8Y44.A1       net (fanout=9)        1.454   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1
+    SLICE_X8Y44.A        Tilo                  0.254   systemregisters_systickcounter<2>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X11Y45.B1      net (fanout=17)       0.808   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot
+    SLICE_X11Y45.CLK     Tas                   0.373   systemregisters_systickcounter<10>
+                                                       systemregisters_systickcounter_8_dpot
+                                                       systemregisters_systickcounter_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.728ns (2.006ns logic, 3.722ns route)
+                                                       (35.0% logic, 65.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point systemregisters_systickcounter_27 (SLICE_X10Y41.D5), 120 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.069ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_4 (FF)
+  Destination:          systemregisters_systickcounter_27 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.894ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.002ns (0.619 - 0.621)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_4 to systemregisters_systickcounter_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y43.AQ      Tcko                  0.430   systemregisters_systickprescaler<9>
+                                                       systemregisters_systickprescaler_4
+    SLICE_X18Y43.A2      net (fanout=1)        0.705   systemregisters_systickprescaler<4>
+    SLICE_X18Y43.COUT    Topcya                0.472   systemregisters_systickprescaler<7>
+                                                       systemregisters_systickprescaler<4>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<7>
+    SLICE_X18Y44.CIN     net (fanout=1)        0.003   Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<7>
+    SLICE_X18Y44.CMUX    Tcinc                 0.289   systemregisters_systickprescaler<11>
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<11>
+    SLICE_X16Y44.A2      net (fanout=2)        0.747   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<10>
+    SLICE_X16Y44.A       Tilo                  0.254   N229
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1_SW0
+    SLICE_X11Y46.C1      net (fanout=2)        1.456   N229
+    SLICE_X11Y46.C       Tilo                  0.259   systemregisters_systickcounter<17>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot_1
+    SLICE_X10Y41.D5      net (fanout=15)       1.058   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot2
+    SLICE_X10Y41.CLK     Tas                   0.221   data<11>_MLTSRCEDGELogicTrst5
+                                                       systemregisters_systickcounter_27_dpot
+                                                       systemregisters_systickcounter_27
+    -------------------------------------------------  ---------------------------
+    Total                                      5.894ns (1.925ns logic, 3.969ns route)
+                                                       (32.7% logic, 67.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.088ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_4 (FF)
+  Destination:          systemregisters_systickcounter_27 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.875ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.002ns (0.619 - 0.621)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_4 to systemregisters_systickcounter_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y43.AQ      Tcko                  0.430   systemregisters_systickprescaler<9>
+                                                       systemregisters_systickprescaler_4
+    SLICE_X18Y43.A2      net (fanout=1)        0.705   systemregisters_systickprescaler<4>
+    SLICE_X18Y43.COUT    Topcya                0.472   systemregisters_systickprescaler<7>
+                                                       systemregisters_systickprescaler<4>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<7>
+    SLICE_X18Y44.CIN     net (fanout=1)        0.003   Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<7>
+    SLICE_X18Y44.AMUX    Tcina                 0.210   systemregisters_systickprescaler<11>
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<11>
+    SLICE_X16Y44.A1      net (fanout=3)        0.807   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<8>
+    SLICE_X16Y44.A       Tilo                  0.254   N229
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1_SW0
+    SLICE_X11Y46.C1      net (fanout=2)        1.456   N229
+    SLICE_X11Y46.C       Tilo                  0.259   systemregisters_systickcounter<17>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot_1
+    SLICE_X10Y41.D5      net (fanout=15)       1.058   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot2
+    SLICE_X10Y41.CLK     Tas                   0.221   data<11>_MLTSRCEDGELogicTrst5
+                                                       systemregisters_systickcounter_27_dpot
+                                                       systemregisters_systickcounter_27
+    -------------------------------------------------  ---------------------------
+    Total                                      5.875ns (1.846ns logic, 4.029ns route)
+                                                       (31.4% logic, 68.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.183ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               systemregisters_systickprescaler_8 (FF)
+  Destination:          systemregisters_systickcounter_27 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.780ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.002ns (0.619 - 0.621)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: systemregisters_systickprescaler_8 to systemregisters_systickcounter_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y43.CQ      Tcko                  0.430   systemregisters_systickprescaler<9>
+                                                       systemregisters_systickprescaler_8
+    SLICE_X18Y44.A1      net (fanout=1)        0.719   systemregisters_systickprescaler<8>
+    SLICE_X18Y44.CMUX    Topac                 0.636   systemregisters_systickprescaler<11>
+                                                       systemregisters_systickprescaler<8>_rt
+                                                       Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<11>
+    SLICE_X16Y44.A2      net (fanout=2)        0.747   systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<10>
+    SLICE_X16Y44.A       Tilo                  0.254   N229
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1_SW0
+    SLICE_X11Y46.C1      net (fanout=2)        1.456   N229
+    SLICE_X11Y46.C       Tilo                  0.259   systemregisters_systickcounter<17>
+                                                       systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot_1
+    SLICE_X10Y41.D5      net (fanout=15)       1.058   systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot2
+    SLICE_X10Y41.CLK     Tas                   0.221   data<11>_MLTSRCEDGELogicTrst5
+                                                       systemregisters_systickcounter_27_dpot
+                                                       systemregisters_systickcounter_27
+    -------------------------------------------------  ---------------------------
+    Total                                      5.780ns (1.800ns logic, 3.980ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point systickint (SLICE_X19Y42.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               systickint (FF)
+  Destination:          systickint (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.440ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: systickint to systickint
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y42.DQ      Tcko                  0.198   systickint
+                                                       systickint
+    SLICE_X19Y42.D6      net (fanout=2)        0.027   systickint
+    SLICE_X19Y42.CLK     Tah         (-Th)    -0.215   systickint
+                                                       systickint_dpot1
+                                                       systickint
+    -------------------------------------------------  ---------------------------
+    Total                                      0.440ns (0.413ns logic, 0.027ns route)
+                                                       (93.9% logic, 6.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point systemregisters_systickinterval_7 (SLICE_X15Y32.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.444ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               systemregisters_systickinterval_7 (FF)
+  Destination:          systemregisters_systickinterval_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.444ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: systemregisters_systickinterval_7 to systemregisters_systickinterval_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y32.AQ      Tcko                  0.198   systemregisters_systickinterval<10>
+                                                       systemregisters_systickinterval_7
+    SLICE_X15Y32.A6      net (fanout=4)        0.031   systemregisters_systickinterval<7>
+    SLICE_X15Y32.CLK     Tah         (-Th)    -0.215   systemregisters_systickinterval<10>
+                                                       systemregisters_systickinterval_7_dpot1
+                                                       systemregisters_systickinterval_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.444ns (0.413ns logic, 0.031ns route)
+                                                       (93.0% logic, 7.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point systemregisters_systickcounter_10 (SLICE_X11Y45.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.445ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               systemregisters_systickcounter_10 (FF)
+  Destination:          systemregisters_systickcounter_10 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.445ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: systemregisters_systickcounter_10 to systemregisters_systickcounter_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y45.DQ      Tcko                  0.198   systemregisters_systickcounter<10>
+                                                       systemregisters_systickcounter_10
+    SLICE_X11Y45.D6      net (fanout=3)        0.032   systemregisters_systickcounter<10>
+    SLICE_X11Y45.CLK     Tah         (-Th)    -0.215   systemregisters_systickcounter<10>
+                                                       systemregisters_systickcounter_10_dpot
+                                                       systemregisters_systickcounter_10
+    -------------------------------------------------  ---------------------------
+    Total                                      0.445ns (0.413ns logic, 0.032ns route)
+                                                       (92.8% logic, 7.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 17.334ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y14.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: systemregisters_systickcounter<2>/CLK
+  Logical resource: systemregisters_systickcounter_0/CK
+  Location pin: SLICE_X8Y44.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: systemregisters_systickcounter<2>/CLK
+  Logical resource: systemregisters_systickcounter_1/CK
+  Location pin: SLICE_X8Y44.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.061|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 8573 paths, 0 nets, and 377 connections
+
+Design statistics:
+   Minimum period:   6.061ns{1}   (Maximum frequency: 164.989MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Jul 29 16:50:35 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 143 MB
+
+
+

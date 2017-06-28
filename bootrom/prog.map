@@ -1,0 +1,78 @@
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 main.o (symbol from plugin)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000000e00000 0x0000000000001000 r
+ram              0x0000000000f00000 0x0000000000000800
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD crt.o
+LOAD main.o
+LOAD /tmp/cciPk90y.ltrans0.ltrans.o
+LOAD /home/daniel/coding/musasim/toolchains/inst/m68k-elf/lib/gcc/m68k-elf/5.2.0/m68000/libgcc.a
+LOAD /home/daniel/coding/musasim/toolchains/inst/m68k-elf/lib/gcc/m68k-elf/5.2.0/../../../../m68k-elf/lib/m68000/libc.a
+LOAD /home/daniel/coding/musasim/toolchains/inst/m68k-elf/lib/gcc/m68k-elf/5.2.0/m68000/libgcc.a
+                0x0000000000000000                . = 0x0
+
+.startup        0x0000000000e00000      0x1a8
+ *(.text)
+ .text          0x0000000000e00000       0x3c crt.o
+ .text          0x0000000000e0003c      0x16c /tmp/cciPk90y.ltrans0.ltrans.o
+                0x0000000000e001a8                . = ALIGN (0x2)
+
+.text           0x0000000000e001a8      0x37c
+ *(.text*)
+ .text.startup  0x0000000000e001a8      0x2d6 /tmp/cciPk90y.ltrans0.ltrans.o
+                0x0000000000e001a8                main
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000000e0047e       0x9b /tmp/cciPk90y.ltrans0.ltrans.o
+ .rodata        0x0000000000e00519        0x9 /tmp/cciPk90y.ltrans0.ltrans.o
+ *(.eh_frame)
+                0x0000000000e00524                . = ALIGN (0x4)
+ *fill*         0x0000000000e00522        0x2 
+                0x0000000000e00524                _text_end = .
+
+.data           0x0000000000f00000        0x0 load address 0x0000000000e00524
+                0x0000000000f00000                _data_start = .
+ *(.data*)
+ .data          0x0000000000f00000        0x0 crt.o
+ .data          0x0000000000f00000        0x0 /tmp/cciPk90y.ltrans0.ltrans.o
+                0x0000000000f00000                . = ALIGN (0x4)
+                0x0000000000f00000                _data_end = .
+
+.bss            0x0000000000f00000        0x0 load address 0x0000000000e00524
+                0x0000000000f00000                _bss_start = .
+ *(.bss*)
+ .bss           0x0000000000f00000        0x0 crt.o
+ .bss           0x0000000000f00000        0x0 /tmp/cciPk90y.ltrans0.ltrans.o
+                0x0000000000f00000                . = ALIGN (0x4)
+                0x0000000000f00000                _bss_end = .
+                0x0000000000f00000                _end = .
+                0x0000000000f00000                end = .
+OUTPUT(prog.elf elf32-m68k)
+
+.startup        0x0000000000000000        0x0
+ .startup       0x0000000000000000        0x0 crt.o
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 /tmp/cciPk90y.ltrans0.ltrans.o
+                                         0x12 (size before relaxing)
+
+Cross Reference Table
+
+Symbol                                            File
+_bss_end                                          crt.o
+_bss_start                                        crt.o
+_data_end                                         crt.o
+_data_start                                       crt.o
+_text_end                                         crt.o
+main                                              /tmp/cciPk90y.ltrans0.ltrans.o
+                                                  main.o (symbol from plugin)
+                                                  crt.o

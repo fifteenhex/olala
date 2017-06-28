@@ -1,0 +1,62 @@
+68K GAS  crt.s 			page 1
+
+
+   1               	.extern _bss_start
+   2               	.extern _bss_end
+   3               	.extern _text_end
+   4               	.extern _data_start
+   5               	.extern _data_end
+   6               	
+   7               	.section .startup
+   8               	
+   9               	.text
+  10               	
+  11               	vectors:
+  12 0000 00F0 0800 		dc.l	0xF00000 + 2048						/* Initial stack pointer */
+  13 0004 0000 0000 		dc.l	start							/* Start of program Code */
+  14               	
+  15               	start:
+  16               	
+  17               	clearbss:
+  18               		#clear bss
+  19 0008 41F9 0000 		lea.l	_bss_start,%a0	/* Clear bss */
+  19      0000 
+  20 000e 203C 0000 		move.l	#_bss_end,%d0
+  20      0000 
+  21 0014 B1C0      	1:	cmp.l	%d0,%a0
+  22 0016 6704      		beq.s	2f
+  23 0018 4218      		clr.b	(%a0)+
+  24 001a 60F8      		bra.s	1b
+  25               	2:
+  26               	
+  27               	copydata:
+  28               		#copy data
+  29 001c 41F9 0000 		lea.l	_text_end,%a0	/* data is located after the text */
+  29      0000 
+  30 0022 43F9 0000 		lea.l	_data_start,%a1 /* the data's real start address */
+  30      0000 
+  31 0028 203C 0000 		move.l	#_data_end,%d0  /* the data's real end address */
+  31      0000 
+  32 002e B089      	1:	cmp.l	%a1,%d0			/* copy data from where ever a0 points until a1 equals the end of the data */
+  33 0030 6704      		beq.s	2f
+  34 0032 12D8      		move.b	(%a0)+,(%a1)+
+  35 0034 60F8      		bra.s	1b
+  36               	2:
+  37 0036 4EF9 0000 		jmp	main
+  37      0000 
+68K GAS  crt.s 			page 2
+
+
+DEFINED SYMBOLS
+               crt.s:11     .text:0000000000000000 vectors
+               crt.s:15     .text:0000000000000008 start
+               crt.s:17     .text:0000000000000008 clearbss
+               crt.s:27     .text:000000000000001c copydata
+
+UNDEFINED SYMBOLS
+_bss_start
+_bss_end
+_text_end
+_data_start
+_data_end
+main

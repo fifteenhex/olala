@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/daniel/hardware/OLALA/fpga/ise/impact.xsl
+OUTFILE=/home/daniel/hardware/OLALA/fpga/ise/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/home/daniel/hardware/OLALA/fpga/ise
+LICENSE=iMPACT
+USER_INFO=iMPACT

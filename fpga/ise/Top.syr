@@ -1,0 +1,1444 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/daniel/hardware/OLALA/fpga/myhdl/pck_myhdl_090.vhd" into library work
+Parsing package <pck_myhdl_090>.
+Parsing package body <pck_myhdl_090>.
+Parsing VHDL file "/home/daniel/hardware/OLALA/fpga/myhdl/Top.vhd" into library work
+Parsing entity <Top>.
+Parsing architecture <MyHDL> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Top> (architecture <MyHDL>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "/home/daniel/hardware/OLALA/fpga/myhdl/Top.vhd".
+WARNING:Xst:647 - Input <addr<18:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <notbg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <notavec> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x8-bit single-port RAM <Mram_bootram_memu> for signal <bootram_memu>.
+    Found 1024x8-bit single-port RAM <Mram_bootram_meml> for signal <bootram_meml>.
+    Found 2-bit register for signal <clockgenerator_counter>.
+    Found 1-bit register for signal <baudout>.
+    Found 1-bit register for signal <uart_rxpushcs>.
+    Found 1-bit register for signal <uart_rxpush>.
+    Found 1-bit register for signal <uart_txpop>.
+    Found 1-bit register for signal <tx>.
+    Found 1-bit register for signal <uart_txpopcs>.
+    Found 1-bit register for signal <systickint>.
+    Found 7-bit register for signal <resetgenerator_counter>.
+    Found 32-bit register for signal <systemregisters_systickcounter>.
+    Found 16-bit register for signal <systemregisters_systickinterval>.
+    Found 16-bit register for signal <systemregisters_systickprescaler>.
+    Found 8-bit register for signal <uart_rxfifo_mem<0>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<1>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<2>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<3>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<4>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<5>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<6>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<7>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<8>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<9>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<10>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<11>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<12>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<13>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<14>>.
+    Found 8-bit register for signal <uart_rxfifo_mem<15>>.
+    Found 8-bit register for signal <uart_txfifo_mem<0>>.
+    Found 8-bit register for signal <uart_txfifo_mem<1>>.
+    Found 8-bit register for signal <uart_txfifo_mem<2>>.
+    Found 8-bit register for signal <uart_txfifo_mem<3>>.
+    Found 8-bit register for signal <uart_txfifo_mem<4>>.
+    Found 8-bit register for signal <uart_txfifo_mem<5>>.
+    Found 8-bit register for signal <uart_txfifo_mem<6>>.
+    Found 8-bit register for signal <uart_txfifo_mem<7>>.
+    Found 8-bit register for signal <uart_txfifo_mem<8>>.
+    Found 8-bit register for signal <uart_txfifo_mem<9>>.
+    Found 8-bit register for signal <uart_txfifo_mem<10>>.
+    Found 8-bit register for signal <uart_txfifo_mem<11>>.
+    Found 8-bit register for signal <uart_txfifo_mem<12>>.
+    Found 8-bit register for signal <uart_txfifo_mem<13>>.
+    Found 8-bit register for signal <uart_txfifo_mem<14>>.
+    Found 8-bit register for signal <uart_txfifo_mem<15>>.
+    Found 8-bit register for signal <uart_config>.
+    Found 8-bit register for signal <uart_clockscaler2>.
+    Found 8-bit register for signal <uart_clockscaler1>.
+    Found 8-bit register for signal <uart_clockscalercounter1>.
+    Found 8-bit register for signal <uart_clockscalercounter2>.
+    Found 8-bit register for signal <uart_rxdatainbits>.
+    Found 4-bit register for signal <uart_rxfifo_inpointer>.
+    Found 4-bit register for signal <uart_rxfifo_outpointer>.
+    Found 4-bit register for signal <uart_txfifo_inpointer>.
+    Found 4-bit register for signal <uart_txfifo_outpointer>.
+    Found 4-bit register for signal <uart_rxcounter>.
+    Found 4-bit register for signal <uart_txcounter>.
+    Found 2-bit register for signal <uart_rxstate>.
+    Found 2-bit register for signal <uart_txstate>.
+    Found 3-bit register for signal <uart_rxbitcounter>.
+    Found 3-bit register for signal <uart_txbitcounter>.
+    Found 1-bit register for signal <internalreset>.
+    Found 1-bit register for signal <resetgenerator_intnotcpuhalt>.
+    Found 1-bit register for signal <resetgenerator_intnotcpureset>.
+    Found 8-bit register for signal <ledsregister>.
+    Found 8-bit register for signal <dividerbit>.
+    Found 1-bit register for signal <bootromdisable>.
+    Found 1-bit register for signal <systemregisters_systickintenabled>.
+    Found 5-bit register for signal <chipselects>.
+    Found finite state machine <FSM_0> for signal <uart_rxstate>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | baudout (rising_edge)                          |
+    | Reset              | internalreset (negative)                       |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | rxstate_idle                                   |
+    | Power Up State     | rxstate_idle                                   |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <uart_txstate>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | baudout (rising_edge)                          |
+    | Reset              | internalreset (negative)                       |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | txstate_idle                                   |
+    | Power Up State     | txstate_idle                                   |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <dividerbit[7]_GND_6_o_add_18_OUT> created at line 1241.
+    Found 2-bit adder for signal <clockgenerator_counter[1]_GND_6_o_add_35_OUT> created at line 1241.
+    Found 7-bit adder for signal <resetgenerator_counter[6]_GND_6_o_add_38_OUT> created at line 1241.
+    Found 16-bit adder for signal <systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT> created at line 1241.
+    Found 32-bit adder for signal <systemregisters_systickcounter[31]_GND_6_o_add_44_OUT> created at line 1241.
+    Found 5-bit adder for signal <n0632> created at line 3043.
+    Found 4-bit adder for signal <uart_rxfifo_inpointer[3]_GND_6_o_add_101_OUT> created at line 1241.
+    Found 4-bit adder for signal <uart_rxfifo_outpointer[3]_GND_6_o_add_156_OUT> created at line 1241.
+    Found 5-bit adder for signal <n0674> created at line 3110.
+    Found 4-bit adder for signal <uart_txfifo_inpointer[3]_GND_6_o_add_168_OUT> created at line 1241.
+    Found 4-bit adder for signal <uart_txfifo_outpointer[3]_GND_6_o_add_223_OUT> created at line 1241.
+    Found 8-bit adder for signal <uart_clockscalercounter2[7]_GND_6_o_add_248_OUT> created at line 1241.
+    Found 8-bit adder for signal <uart_clockscalercounter1[7]_GND_6_o_add_250_OUT> created at line 1241.
+    Found 3-bit adder for signal <uart_rxbitcounter[2]_GND_6_o_add_264_OUT> created at line 1241.
+    Found 4-bit adder for signal <uart_rxcounter[3]_GND_6_o_add_276_OUT> created at line 1241.
+    Found 3-bit adder for signal <uart_txbitcounter[2]_GND_6_o_add_349_OUT> created at line 1241.
+    Found 4-bit adder for signal <uart_txcounter[3]_GND_6_o_add_358_OUT> created at line 1241.
+    Found 2-bit subtractor for signal <GND_6_o_GND_6_o_sub_20_OUT<1:0>> created at line 223.
+    Found 16-bit subtractor for signal <GND_6_o_GND_6_o_sub_48_OUT<15:0>> created at line 1308.
+    Found 4-bit subtractor for signal <GND_6_o_GND_6_o_sub_96_OUT<3:0>> created at line 3041.
+    Found 5-bit subtractor for signal <n0866> created at line 0.
+    Found 4-bit subtractor for signal <GND_6_o_GND_6_o_sub_163_OUT<3:0>> created at line 3108.
+    Found 5-bit subtractor for signal <n0873> created at line 0.
+    Found 256x3-bit Read Only RAM for signal <interruptcontroller_intipl>
+    Found 1024x16-bit Read Only RAM for signal <addr[9]_GND_6_o_wide_mux_86_OUT>
+    Found 4x2-bit Read Only RAM for signal <_n1398>
+    Found 256x8-bit Read Only RAM for signal <_n1661>
+    Found 1-bit 3-to-1 multiplexer for signal <GND_6_o_GND_7_o_Mux_34_o> created at line 223.
+    Found 16-bit 8-to-1 multiplexer for signal <addr[2]_GND_6_o_wide_mux_70_OUT> created at line 336.
+    Found 8-bit 16-to-1 multiplexer for signal <uart_rxdataout> created at line 3100.
+    Found 8-bit 16-to-1 multiplexer for signal <uart_txdataout> created at line 3167.
+    Found 8-bit 7-to-1 multiplexer for signal <uart_upperbyteout> created at line 3177.
+    Found 1-bit tristate buffer for signal <notcpureset> created at line 236
+    Found 1-bit tristate buffer for signal <notcpuhalt> created at line 246
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<15>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<14>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<13>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<12>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<11>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<10>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<9>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<8>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<7>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<6>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<5>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<4>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<3>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<2>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<1>> created at line 333
+    Found 1-bit tristate buffer for signal <systemregisters_dataout<0>> created at line 333
+    Found 1-bit tristate buffer for signal <bootrom_dataout<15>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<14>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<13>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<12>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<11>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<10>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<9>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<8>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<7>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<6>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<5>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<4>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<3>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<2>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<1>> created at line 948
+    Found 1-bit tristate buffer for signal <bootrom_dataout<0>> created at line 948
+    Found 1-bit tristate buffer for signal <bootram_dataout<15>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<14>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<13>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<12>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<11>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<10>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<9>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<8>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<7>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<6>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<5>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<4>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<3>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<2>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<1>> created at line 3026
+    Found 1-bit tristate buffer for signal <bootram_dataout<0>> created at line 3026
+    Found 1-bit tristate buffer for signal <uart_dataout<15>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<14>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<13>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<12>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<11>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<10>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<9>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<8>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<7>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<6>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<5>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<4>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<3>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<2>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<1>> created at line 3196
+    Found 1-bit tristate buffer for signal <uart_dataout<0>> created at line 3196
+WARNING:Xst:737 - Found 1-bit latch for signal <cpuclock>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 7-bit comparator greater for signal <resetgenerator_counter[6]_PWR_6_o_LessThan_38_o> created at line 264
+    Found 4-bit comparator equal for signal <uart_rxempty> created at line 3038
+    Found 4-bit comparator greater for signal <uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o> created at line 3040
+    Found 4-bit comparator equal for signal <uart_rxfull> created at line 3053
+    Found 4-bit comparator equal for signal <uart_txempty> created at line 3105
+    Found 4-bit comparator greater for signal <uart_txfifo_outpointer[3]_uart_txfifo_inpointer[3]_LessThan_162_o> created at line 3107
+    Found 4-bit comparator equal for signal <uart_txfull> created at line 3120
+    Found 8-bit comparator equal for signal <uart_clockscalercounter1[7]_uart_clockscaler1[7]_equal_247_o> created at line 3233
+    Found 8-bit comparator equal for signal <uart_clockscalercounter2[7]_uart_clockscaler2[7]_equal_248_o> created at line 3235
+    Summary:
+	inferred   6 RAM(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred 440 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   9 Comparator(s).
+	inferred  64 Multiplexer(s).
+	inferred  66 Tristate(s).
+	inferred   2 Finite State Machine(s).
+Unit <Top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 1024x16-bit single-port Read Only RAM                 : 1
+ 1024x8-bit single-port RAM                            : 2
+ 256x3-bit single-port Read Only RAM                   : 1
+ 256x8-bit single-port Read Only RAM                   : 1
+ 4x2-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 23
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 6
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 2
+ 5-bit subtractor                                      : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 66
+ 1-bit register                                        : 12
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 6
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 40
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 9
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 2
+ 7-bit comparator greater                              : 1
+ 8-bit comparator equal                                : 2
+# Multiplexers                                         : 64
+ 1-bit 2-to-1 multiplexer                              : 48
+ 1-bit 3-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 16-bit 8-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit 16-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+ 8-bit 7-to-1 multiplexer                              : 1
+# Tristates                                            : 66
+ 1-bit tristate buffer                                 : 66
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Top>.
+The following registers are absorbed into counter <uart_rxfifo_inpointer>: 1 register on signal <uart_rxfifo_inpointer>.
+The following registers are absorbed into counter <clockgenerator_counter>: 1 register on signal <clockgenerator_counter>.
+The following registers are absorbed into counter <systemregisters_systickinterval>: 1 register on signal <systemregisters_systickinterval>.
+The following registers are absorbed into counter <systemregisters_systickcounter>: 1 register on signal <systemregisters_systickcounter>.
+The following registers are absorbed into counter <resetgenerator_counter>: 1 register on signal <resetgenerator_counter>.
+The following registers are absorbed into counter <uart_clockscalercounter1>: 1 register on signal <uart_clockscalercounter1>.
+The following registers are absorbed into counter <uart_clockscalercounter2>: 1 register on signal <uart_clockscalercounter2>.
+The following registers are absorbed into counter <uart_rxfifo_outpointer>: 1 register on signal <uart_rxfifo_outpointer>.
+The following registers are absorbed into counter <uart_txfifo_inpointer>: 1 register on signal <uart_txfifo_inpointer>.
+The following registers are absorbed into counter <uart_txfifo_outpointer>: 1 register on signal <uart_txfifo_outpointer>.
+The following registers are absorbed into counter <uart_rxcounter>: 1 register on signal <uart_rxcounter>.
+The following registers are absorbed into counter <uart_txcounter>: 1 register on signal <uart_txcounter>.
+The following registers are absorbed into counter <uart_rxbitcounter>: 1 register on signal <uart_rxbitcounter>.
+INFO:Xst:3231 - The small RAM <Mram__n1398> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <dividerbit<1:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_bootram_memu> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     clkA           | connected to internal node          | fall     |
+    |     weA            | connected to internal node          | low      |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <data<15:8>>    |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_bootram_meml> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     clkA           | connected to internal node          | fall     |
+    |     weA            | connected to internal node          | low      |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <data<7:0>>     |          |
+    |     doA            | connected to signal <bootram_intdataout> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_addr[9]_GND_6_o_wide_mux_86_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 16-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1661> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <("000000",systickint,"0")> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_interruptcontroller_intipl> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 3-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <_n1661>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <interruptcontroller_intipl> |          |
+    -----------------------------------------------------------------------
+Unit <Top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 1024x16-bit single-port distributed Read Only RAM     : 1
+ 1024x8-bit single-port distributed RAM                : 2
+ 256x3-bit single-port distributed Read Only RAM       : 1
+ 256x8-bit single-port distributed Read Only RAM       : 1
+ 4x2-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 15
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 6
+ 4-bit subtractor                                      : 4
+# Counters                                             : 13
+ 16-bit down counter                                   : 1
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 6
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 340
+ Flip-Flops                                            : 340
+# Comparators                                          : 9
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 2
+ 7-bit comparator greater                              : 1
+ 8-bit comparator equal                                : 2
+# Multiplexers                                         : 75
+ 1-bit 2-to-1 multiplexer                              : 56
+ 1-bit 3-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 8
+ 16-bit 2-to-1 multiplexer                             : 1
+ 16-bit 8-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit 16-to-1 multiplexer                             : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <internalreset> in Unit <Top> is equivalent to the following 2 FFs/Latches, which will be removed : <resetgenerator_intnotcpuhalt> <resetgenerator_intnotcpureset> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <uart_txstate[1:2]> with gray encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ txstate_idle  | 00
+ txstate_start | 01
+ txstate_data  | 11
+ txstate_stop  | 10
+---------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <uart_rxstate[1:2]> with gray encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ rxstate_idle  | 00
+ rxstate_start | 01
+ rxstate_data  | 11
+ rxstate_stop  | 10
+---------------------------
+WARNING:Xst:2040 - Unit Top: 16 multi-source signals are replaced by logic (pull-up yes): data<0>_MLTSRCEDGE, data<10>_MLTSRCEDGE, data<11>_MLTSRCEDGE, data<12>_MLTSRCEDGE, data<13>_MLTSRCEDGE, data<14>_MLTSRCEDGE, data<15>_MLTSRCEDGE, data<1>_MLTSRCEDGE, data<2>_MLTSRCEDGE, data<3>_MLTSRCEDGE, data<4>_MLTSRCEDGE, data<5>_MLTSRCEDGE, data<6>_MLTSRCEDGE, data<7>_MLTSRCEDGE, data<8>_MLTSRCEDGE, data<9>_MLTSRCEDGE.
+
+Optimizing unit <Top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 16.
+Latch cpuclock has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 442
+ Flip-Flops                                            : 442
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1037
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 45
+#      LUT2                        : 41
+#      LUT3                        : 95
+#      LUT4                        : 47
+#      LUT5                        : 82
+#      LUT6                        : 481
+#      MUXCY                       : 75
+#      MUXF7                       : 58
+#      MUXF8                       : 16
+#      VCC                         : 1
+#      XORCY                       : 80
+# FlipFlops/Latches                : 444
+#      FD_1                        : 5
+#      FDC                         : 28
+#      FDCE                        : 231
+#      FDCE_1                      : 152
+#      FDE_1                       : 18
+#      FDP                         : 2
+#      FDPE                        : 6
+#      LD                          : 2
+# RAMS                             : 64
+#      RAM256X1S                   : 64
+# Clock Buffers                    : 6
+#      BUFG                        : 4
+#      BUFGP                       : 2
+# IO Buffers                       : 59
+#      IBUF                        : 20
+#      IOBUF                       : 16
+#      OBUF                        : 21
+#      OBUFT                       : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             443  out of  11440     3%  
+ Number of Slice LUTs:                 1062  out of   5720    18%  
+    Number used as Logic:               806  out of   5720    14%  
+    Number used as Memory:              256  out of   1440    17%  
+       Number used as RAM:              256
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1206
+   Number with an unused Flip Flop:     763  out of   1206    63%  
+   Number with an unused LUT:           144  out of   1206    11%  
+   Number of fully used LUT-FF pairs:   299  out of   1206    24%  
+   Number of unique control sets:        64
+
+IO Utilization: 
+ Number of IOs:                          72
+ Number of bonded IOBs:                  61  out of    102    59%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------+----------------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)            | Load  |
+-------------------------------------------------------+----------------------------------+-------+
+notas                                                  | BUFGP                            | 5     |
+cpuclock_OBUF                                          | BUFG                             | 25    |
+uart_baudclock                                         | BUFG                             | 31    |
+rnotw_notuds_AND_13_o(rnotw_notuds_AND_13_o1:O)        | BUFG(*)(ledsregister_0)          | 170   |
+uart_rxpush                                            | BUFG                             | 132   |
+dividerbit_1                                           | NONE(cpuclock)                   | 2     |
+clk                                                    | BUFGP                            | 67    |
+notuwe_OBUF(rnotw_notuds_AND_13_o_inv1:O)              | NONE(*)(Mram_bootram_memu1)      | 36    |
+notlwe_OBUF(rnotw_notlds_AND_14_o_inv32:O)             | NONE(*)(Mram_bootram_meml2)      | 32    |
+rnotw_notuds_AND_12_o_inv(rnotw_notuds_AND_12_o_inv1:O)| NONE(*)(uart_rxfifo_outpointer_0)| 4     |
+uart_txpop                                             | NONE(uart_txfifo_outpointer_0)   | 4     |
+-------------------------------------------------------+----------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.107ns (Maximum Frequency: 163.740MHz)
+   Minimum input arrival time before clock: 8.195ns
+   Maximum output required time after clock: 12.199ns
+   Maximum combinational path delay: 14.575ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cpuclock_OBUF'
+  Clock period: 5.257ns (frequency: 190.223MHz)
+  Total number of paths / destination ports: 942 / 58
+-------------------------------------------------------------------------
+Delay:               5.257ns (Levels of Logic = 3)
+  Source:            uart_clockscalercounter1_2 (FF)
+  Destination:       uart_baudclock (FF)
+  Source Clock:      cpuclock_OBUF rising
+  Destination Clock: cpuclock_OBUF rising
+
+  Data Path: uart_clockscalercounter1_2 to uart_baudclock
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.525   0.954  uart_clockscalercounter1_2 (uart_clockscalercounter1_2)
+     LUT6:I3->O            3   0.235   0.874  uart_clockscalercounter1[7]_uart_clockscaler1[7]_equal_247_o82 (uart_clockscalercounter1[7]_uart_clockscaler1[7]_equal_247_o81)
+     LUT6:I4->O           16   0.250   1.182  uart_clockscalercounter1[7]_uart_clockscaler1[7]_equal_247_o83 (uart_clockscalercounter1[7]_uart_clockscaler1[7]_equal_247_o)
+     LUT2:I1->O            1   0.254   0.681  _n0967_inv1 (_n0967_inv)
+     FDPE:CE                   0.302          uart_baudclock
+    ----------------------------------------
+    Total                      5.257ns (1.566ns logic, 3.691ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'uart_baudclock'
+  Clock period: 4.511ns (frequency: 221.680MHz)
+  Total number of paths / destination ports: 271 / 58
+-------------------------------------------------------------------------
+Delay:               4.511ns (Levels of Logic = 2)
+  Source:            uart_txcounter_0 (FF)
+  Destination:       uart_txbitcounter_0 (FF)
+  Source Clock:      uart_baudclock rising
+  Destination Clock: uart_baudclock rising
+
+  Data Path: uart_txcounter_0 to uart_txbitcounter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.525   1.152  uart_txcounter_0 (uart_txcounter_0)
+     LUT4:I0->O            4   0.254   1.259  uart_txcounter[3]_GND_6_o_equal_360_o<3>1 (uart_txcounter[3]_GND_6_o_equal_360_o)
+     LUT6:I0->O            3   0.254   0.765  _n1362_inv (_n1362_inv)
+     FDCE:CE                   0.302          uart_txbitcounter_0
+    ----------------------------------------
+    Total                      4.511ns (1.335ns logic, 3.176ns route)
+                                       (29.6% logic, 70.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'uart_rxpush'
+  Clock period: 4.900ns (frequency: 204.068MHz)
+  Total number of paths / destination ports: 562 / 136
+-------------------------------------------------------------------------
+Delay:               4.900ns (Levels of Logic = 2)
+  Source:            uart_rxfifo_inpointer_0 (FF)
+  Destination:       uart_rxfifo_inpointer_0 (FF)
+  Source Clock:      uart_rxpush rising
+  Destination Clock: uart_rxpush rising
+
+  Data Path: uart_rxfifo_inpointer_0 to uart_rxfifo_inpointer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            31   0.525   1.503  uart_rxfifo_inpointer_0 (uart_rxfifo_inpointer_0)
+     LUT2:I1->O            4   0.254   1.259  Madd_n0632_Madd_cy<0>1 (Madd_n0632_Madd_cy<0>)
+     LUT6:I0->O            4   0.254   0.803  _n1336_inv1_cepot (_n1336_inv1_cepot)
+     FDCE:CE                   0.302          uart_rxfifo_inpointer_0
+    ----------------------------------------
+    Total                      4.900ns (1.335ns logic, 3.565ns route)
+                                       (27.2% logic, 72.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.107ns (frequency: 163.740MHz)
+  Total number of paths / destination ports: 8573 / 116
+-------------------------------------------------------------------------
+Delay:               6.107ns (Levels of Logic = 7)
+  Source:            systemregisters_systickprescaler_0 (FF)
+  Destination:       systickint (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: systemregisters_systickprescaler_0 to systickint
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.525   0.681  systemregisters_systickprescaler_0 (systemregisters_systickprescaler_0)
+     INV:I->O              1   0.255   0.000  Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_lut<0>_INV_0 (Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<0> (Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<1> (Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_cy<1>)
+     XORCY:CI->O           2   0.206   1.181  Madd_systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT_xor<2> (systemregisters_systickprescaler[15]_GND_6_o_add_42_OUT<2>)
+     LUT6:I0->O            9   0.254   0.976  systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>2 (systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>1)
+     LUT6:I5->O           17   0.254   1.209  systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot (systemregisters_systickprescaler[15]_PWR_6_o_equal_44_o<15>3_rstpot)
+     LUT3:I2->O            1   0.254   0.000  systemregisters_systickcounter_0_dpot (systemregisters_systickcounter_0_dpot)
+     FDCE:D                    0.074          systemregisters_systickcounter_0
+    ----------------------------------------
+    Total                      6.107ns (2.060ns logic, 4.047ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'notuwe_OBUF'
+  Clock period: 4.851ns (frequency: 206.136MHz)
+  Total number of paths / destination ports: 50 / 8
+-------------------------------------------------------------------------
+Delay:               4.851ns (Levels of Logic = 2)
+  Source:            uart_txfifo_inpointer_1 (FF)
+  Destination:       uart_txfifo_inpointer_0 (FF)
+  Source Clock:      notuwe_OBUF rising
+  Destination Clock: notuwe_OBUF rising
+
+  Data Path: uart_txfifo_inpointer_1 to uart_txfifo_inpointer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            28   0.525   1.561  uart_txfifo_inpointer_1 (uart_txfifo_inpointer_1)
+     LUT2:I0->O            2   0.250   1.156  Result<1>41 (Result<1>4)
+     LUT6:I1->O            4   0.254   0.803  _n1340_inv1_cepot (_n1340_inv1_cepot)
+     FDCE:CE                   0.302          uart_txfifo_inpointer_0
+    ----------------------------------------
+    Total                      4.851ns (1.331ns logic, 3.520ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rnotw_notuds_AND_12_o_inv'
+  Clock period: 4.601ns (frequency: 217.325MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               4.601ns (Levels of Logic = 2)
+  Source:            uart_rxfifo_outpointer_1 (FF)
+  Destination:       uart_rxfifo_outpointer_0 (FF)
+  Source Clock:      rnotw_notuds_AND_12_o_inv rising
+  Destination Clock: rnotw_notuds_AND_12_o_inv rising
+
+  Data Path: uart_rxfifo_outpointer_1 to uart_rxfifo_outpointer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            45   0.525   1.737  uart_rxfifo_outpointer_1 (uart_rxfifo_outpointer_1)
+     LUT2:I1->O            2   0.254   0.726  Msub_GND_6_o_GND_6_o_sub_96_OUT<3:0>_lut<1>1 (Msub_GND_6_o_GND_6_o_sub_96_OUT<3:0>_lut<1>)
+     LUT6:I5->O            4   0.254   0.803  uart_fifocs_uart_rxempty_AND_51_o1 (uart_fifocs_uart_rxempty_AND_51_o)
+     FDCE:CE                   0.302          uart_rxfifo_outpointer_0
+    ----------------------------------------
+    Total                      4.601ns (1.335ns logic, 3.266ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'uart_txpop'
+  Clock period: 4.777ns (frequency: 209.338MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               4.777ns (Levels of Logic = 2)
+  Source:            uart_txfifo_outpointer_1 (FF)
+  Destination:       uart_txfifo_outpointer_0 (FF)
+  Source Clock:      uart_txpop rising
+  Destination Clock: uart_txpop rising
+
+  Data Path: uart_txfifo_outpointer_1 to uart_txfifo_outpointer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            43   0.525   1.704  uart_txfifo_outpointer_1 (uart_txfifo_outpointer_1)
+     LUT2:I1->O            2   0.254   0.954  Msub_GND_6_o_GND_6_o_sub_163_OUT<3:0>_lut<1>1 (Msub_GND_6_o_GND_6_o_sub_163_OUT<3:0>_lut<1>)
+     LUT6:I3->O            4   0.235   0.803  uart_txpopcs_uart_txempty_AND_54_o1 (uart_txpopcs_uart_txempty_AND_54_o)
+     FDCE:CE                   0.302          uart_txfifo_outpointer_0
+    ----------------------------------------
+    Total                      4.777ns (1.316ns logic, 3.461ns route)
+                                       (27.5% logic, 72.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'notas'
+  Total number of paths / destination ports: 20 / 5
+-------------------------------------------------------------------------
+Offset:              2.773ns (Levels of Logic = 2)
+  Source:            addr<22> (PAD)
+  Destination:       chipselects_0 (FF)
+  Destination Clock: notas falling
+
+  Data Path: addr<22> to chipselects_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   1.117  addr_22_IBUF (addr_22_IBUF)
+     LUT4:I0->O            1   0.254   0.000  n0628<15>1 (n0628<15>)
+     FD_1:D                    0.074          chipselects_4
+    ----------------------------------------
+    Total                      2.773ns (1.656ns logic, 1.117ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'uart_baudclock'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.782ns (Levels of Logic = 2)
+  Source:            rx (PAD)
+  Destination:       uart_rxpushcs (FF)
+  Destination Clock: uart_baudclock rising
+
+  Data Path: rx to uart_rxpushcs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.328   1.236  rx_IBUF (rx_IBUF)
+     LUT5:I2->O            1   0.235   0.681  _n0983_inv1 (_n0983_inv)
+     FDPE:CE                   0.302          uart_rxpushcs
+    ----------------------------------------
+    Total                      3.782ns (1.865ns logic, 1.917ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rnotw_notuds_AND_13_o'
+  Total number of paths / destination ports: 680 / 340
+-------------------------------------------------------------------------
+Offset:              6.990ns (Levels of Logic = 3)
+  Source:            addr<0> (PAD)
+  Destination:       uart_txfifo_mem_0_0 (FF)
+  Destination Clock: rnotw_notuds_AND_13_o falling
+
+  Data Path: addr<0> to uart_txfifo_mem_0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           315   1.328   2.666  addr_0_IBUF (addr_0_IBUF)
+     LUT4:I1->O           19   0.235   1.261  uart_fifocs_INV_119_o1 (uart_fifocs_INV_119_o)
+     LUT5:I4->O            8   0.254   0.943  _n1239_inv1 (_n1239_inv)
+     FDCE_1:CE                 0.302          uart_txfifo_mem_0_0
+    ----------------------------------------
+    Total                      6.990ns (2.119ns logic, 4.871ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cpuclock_OBUF'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.794ns (Levels of Logic = 1)
+  Source:            sysreset (PAD)
+  Destination:       internalreset (FF)
+  Destination Clock: cpuclock_OBUF rising
+
+  Data Path: sysreset to internalreset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.328   1.007  sysreset_IBUF (sysreset_IBUF)
+     FDCE:CLR                  0.459          internalreset
+    ----------------------------------------
+    Total                      2.794ns (1.787ns logic, 1.007ns route)
+                                       (64.0% logic, 36.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 983 / 19
+-------------------------------------------------------------------------
+Offset:              8.195ns (Levels of Logic = 20)
+  Source:            addr<0> (PAD)
+  Destination:       systemregisters_systickinterval_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: addr<0> to systemregisters_systickinterval_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           315   1.328   2.667  addr_0_IBUF (addr_0_IBUF)
+     LUT6:I3->O           33   0.235   1.765  sysregcs_addr[2]_AND_5_o1 (sysregcs_addr[2]_AND_5_o)
+     LUT3:I0->O            1   0.235   0.000  Mcount_systemregisters_systickinterval_lut<0> (Mcount_systemregisters_systickinterval_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcount_systemregisters_systickinterval_cy<0> (Mcount_systemregisters_systickinterval_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<1> (Mcount_systemregisters_systickinterval_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<2> (Mcount_systemregisters_systickinterval_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<3> (Mcount_systemregisters_systickinterval_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<4> (Mcount_systemregisters_systickinterval_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<5> (Mcount_systemregisters_systickinterval_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<6> (Mcount_systemregisters_systickinterval_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<7> (Mcount_systemregisters_systickinterval_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<8> (Mcount_systemregisters_systickinterval_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<9> (Mcount_systemregisters_systickinterval_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<10> (Mcount_systemregisters_systickinterval_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<11> (Mcount_systemregisters_systickinterval_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<12> (Mcount_systemregisters_systickinterval_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_systemregisters_systickinterval_cy<13> (Mcount_systemregisters_systickinterval_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_systemregisters_systickinterval_cy<14> (Mcount_systemregisters_systickinterval_cy<14>)
+     XORCY:CI->O           1   0.206   0.910  Mcount_systemregisters_systickinterval_xor<15> (Mcount_systemregisters_systickinterval15)
+     LUT6:I3->O            1   0.235   0.000  systemregisters_systickinterval_15_dpot1 (systemregisters_systickinterval_15_dpot1)
+     FDCE:D                    0.074          systemregisters_systickinterval_15
+    ----------------------------------------
+    Total                      8.195ns (2.854ns logic, 5.341ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'notuwe_OBUF'
+  Total number of paths / destination ports: 364 / 324
+-------------------------------------------------------------------------
+Offset:              6.095ns (Levels of Logic = 3)
+  Source:            addr<0> (PAD)
+  Destination:       uart_txfifo_inpointer_3 (FF)
+  Destination Clock: notuwe_OBUF rising
+
+  Data Path: addr<0> to uart_txfifo_inpointer_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           315   1.328   2.667  addr_0_IBUF (addr_0_IBUF)
+     LUT4:I1->O           19   0.235   1.537  uart_fifocs_INV_119_o1 (uart_fifocs_INV_119_o)
+     LUT5:I1->O            1   0.254   0.000  uart_txfifo_inpointer_3_dpot (uart_txfifo_inpointer_3_dpot)
+     FDCE:D                    0.074          uart_txfifo_inpointer_3
+    ----------------------------------------
+    Total                      6.095ns (1.891ns logic, 4.203ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'notlwe_OBUF'
+  Total number of paths / destination ports: 352 / 320
+-------------------------------------------------------------------------
+Offset:              5.249ns (Levels of Logic = 2)
+  Source:            addr<8> (PAD)
+  Destination:       Mram_bootram_meml1 (RAM)
+  Destination Clock: notlwe_OBUF rising
+
+  Data Path: addr<8> to Mram_bootram_meml1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           122   1.328   2.505  addr_8_IBUF (addr_8_IBUF)
+     LUT3:I0->O           16   0.235   1.181  write_ctrl (write_ctrl)
+     RAM256X1S:WE              0.000          Mram_bootram_meml1
+    ----------------------------------------
+    Total                      5.249ns (1.563ns logic, 3.686ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rnotw_notuds_AND_12_o_inv'
+  Total number of paths / destination ports: 12 / 4
+-------------------------------------------------------------------------
+Offset:              7.280ns (Levels of Logic = 3)
+  Source:            addr<0> (PAD)
+  Destination:       uart_rxfifo_outpointer_0 (FF)
+  Destination Clock: rnotw_notuds_AND_12_o_inv rising
+
+  Data Path: addr<0> to uart_rxfifo_outpointer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           315   1.328   2.667  addr_0_IBUF (addr_0_IBUF)
+     LUT4:I1->O           19   0.235   1.691  uart_fifocs_INV_119_o1 (uart_fifocs_INV_119_o)
+     LUT6:I1->O            4   0.254   0.803  uart_fifocs_uart_rxempty_AND_51_o1 (uart_fifocs_uart_rxempty_AND_51_o)
+     FDCE:CE                   0.302          uart_rxfifo_outpointer_0
+    ----------------------------------------
+    Total                      7.280ns (2.119ns logic, 5.161ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'notas'
+  Total number of paths / destination ports: 229 / 17
+-------------------------------------------------------------------------
+Offset:              10.872ns (Levels of Logic = 5)
+  Source:            chipselects_3 (FF)
+  Destination:       data<15> (PAD)
+  Source Clock:      notas falling
+
+  Data Path: chipselects_3 to data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             1   0.525   0.958  chipselects_3 (chipselects_3)
+     LUT4:I0->O           25   0.254   1.833  bootromcs_intnotoe_AND_15_o_inv1 (bootromcs_intnotoe_AND_15_o_inv)
+     LUT5:I0->O           24   0.254   1.835  data<10>_MLTSRCEDGELogicTrst11 (data<10>_MLTSRCEDGELogicTrst1)
+     LUT6:I0->O            1   0.254   1.112  data<15>_MLTSRCEDGELogicTrst3 (data<15>_MLTSRCEDGELogicTrst2)
+     LUT5:I0->O            1   0.254   0.681  data<15>_MLTSRCEDGELogicTrst11 (data<15>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_15_IOBUF (data<15>)
+    ----------------------------------------
+    Total                     10.872ns (4.453ns logic, 6.419ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rnotw_notuds_AND_13_o'
+  Total number of paths / destination ports: 101 / 25
+-------------------------------------------------------------------------
+Offset:              10.784ns (Levels of Logic = 5)
+  Source:            bootromdisable (FF)
+  Destination:       data<15> (PAD)
+  Source Clock:      rnotw_notuds_AND_13_o falling
+
+  Data Path: bootromdisable to data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            3   0.525   0.874  bootromdisable (bootromdisable)
+     LUT4:I2->O           25   0.250   1.833  bootromcs_intnotoe_AND_15_o_inv1 (bootromcs_intnotoe_AND_15_o_inv)
+     LUT5:I0->O           24   0.254   1.835  data<10>_MLTSRCEDGELogicTrst11 (data<10>_MLTSRCEDGELogicTrst1)
+     LUT6:I0->O            1   0.254   1.112  data<15>_MLTSRCEDGELogicTrst3 (data<15>_MLTSRCEDGELogicTrst2)
+     LUT5:I0->O            1   0.254   0.681  data<15>_MLTSRCEDGELogicTrst11 (data<15>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_15_IOBUF (data<15>)
+    ----------------------------------------
+    Total                     10.784ns (4.449ns logic, 6.335ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 49 / 17
+-------------------------------------------------------------------------
+Offset:              9.040ns (Levels of Logic = 5)
+  Source:            systemregisters_systickcounter_27 (FF)
+  Destination:       data<11> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: systemregisters_systickcounter_27 to data<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   0.766  systemregisters_systickcounter_27 (systemregisters_systickcounter_27)
+     LUT3:I2->O            1   0.254   1.112  data<11>_MLTSRCEDGELogicTrst6 (data<11>_MLTSRCEDGELogicTrst5)
+     LUT6:I1->O            1   0.254   0.910  data<11>_MLTSRCEDGELogicTrst7 (data<11>_MLTSRCEDGELogicTrst6)
+     LUT6:I3->O            1   0.235   1.137  data<11>_MLTSRCEDGELogicTrst8 (data<11>_MLTSRCEDGELogicTrst7)
+     LUT6:I0->O            1   0.254   0.681  data<11>_MLTSRCEDGELogicTrst9 (data<11>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_11_IOBUF (data<11>)
+    ----------------------------------------
+    Total                      9.040ns (4.434ns logic, 4.606ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rnotw_notuds_AND_12_o_inv'
+  Total number of paths / destination ports: 140 / 8
+-------------------------------------------------------------------------
+Offset:              12.199ns (Levels of Logic = 8)
+  Source:            uart_rxfifo_outpointer_1 (FF)
+  Destination:       data<15> (PAD)
+  Source Clock:      rnotw_notuds_AND_12_o_inv rising
+
+  Data Path: uart_rxfifo_outpointer_1 to data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            45   0.525   1.965  uart_rxfifo_outpointer_1 (uart_rxfifo_outpointer_1)
+     LUT4:I1->O            1   0.235   0.682  uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o11 (uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o1)
+     LUT5:I4->O            2   0.254   1.156  uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o12 (uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o)
+     LUT5:I0->O            1   0.254   0.682  data<15>_MLTSRCEDGELogicTrst9_SW0 (N233)
+     LUT4:I3->O            1   0.254   0.958  data<15>_MLTSRCEDGELogicTrst9 (data<15>_MLTSRCEDGELogicTrst8)
+     LUT5:I1->O            1   0.254   0.000  data<15>_MLTSRCEDGELogicTrst10_G (N246)
+     MUXF7:I1->O           1   0.175   0.958  data<15>_MLTSRCEDGELogicTrst10 (data<15>_MLTSRCEDGELogicTrst9)
+     LUT5:I1->O            1   0.254   0.681  data<15>_MLTSRCEDGELogicTrst11 (data<15>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_15_IOBUF (data<15>)
+    ----------------------------------------
+    Total                     12.199ns (5.117ns logic, 7.082ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uart_rxpush'
+  Total number of paths / destination ports: 191 / 8
+-------------------------------------------------------------------------
+Offset:              12.016ns (Levels of Logic = 8)
+  Source:            uart_rxfifo_inpointer_1 (FF)
+  Destination:       data<15> (PAD)
+  Source Clock:      uart_rxpush rising
+
+  Data Path: uart_rxfifo_inpointer_1 to data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            30   0.525   1.763  uart_rxfifo_inpointer_1 (uart_rxfifo_inpointer_1)
+     LUT4:I0->O            1   0.254   0.682  uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o11 (uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o1)
+     LUT5:I4->O            2   0.254   1.156  uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o12 (uart_rxfifo_outpointer[3]_uart_rxfifo_inpointer[3]_LessThan_95_o)
+     LUT5:I0->O            1   0.254   0.682  data<15>_MLTSRCEDGELogicTrst9_SW0 (N233)
+     LUT4:I3->O            1   0.254   0.958  data<15>_MLTSRCEDGELogicTrst9 (data<15>_MLTSRCEDGELogicTrst8)
+     LUT5:I1->O            1   0.254   0.000  data<15>_MLTSRCEDGELogicTrst10_G (N246)
+     MUXF7:I1->O           1   0.175   0.958  data<15>_MLTSRCEDGELogicTrst10 (data<15>_MLTSRCEDGELogicTrst9)
+     LUT5:I1->O            1   0.254   0.681  data<15>_MLTSRCEDGELogicTrst11 (data<15>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_15_IOBUF (data<15>)
+    ----------------------------------------
+    Total                     12.016ns (5.136ns logic, 6.880ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'notuwe_OBUF'
+  Total number of paths / destination ports: 43 / 4
+-------------------------------------------------------------------------
+Offset:              11.670ns (Levels of Logic = 7)
+  Source:            uart_txfifo_inpointer_2 (FF)
+  Destination:       data<11> (PAD)
+  Source Clock:      notuwe_OBUF rising
+
+  Data Path: uart_txfifo_inpointer_2 to data<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            25   0.525   1.511  uart_txfifo_inpointer_2 (uart_txfifo_inpointer_2)
+     LUT2:I0->O            2   0.250   1.181  Msub_GND_6_o_GND_6_o_sub_163_OUT<3:0>_lut<2>1 (Msub_GND_6_o_GND_6_o_sub_163_OUT<3:0>_lut<2>)
+     LUT6:I0->O            6   0.254   0.876  uart_txempty41 (uart_txempty)
+     LUT6:I5->O            1   0.254   0.910  data<11>_MLTSRCEDGELogicTrst3_SW0 (N237)
+     LUT6:I3->O            1   0.235   0.682  data<11>_MLTSRCEDGELogicTrst3 (data<11>_MLTSRCEDGELogicTrst2)
+     LUT6:I5->O            1   0.254   0.910  data<11>_MLTSRCEDGELogicTrst4 (data<11>_MLTSRCEDGELogicTrst3)
+     LUT6:I3->O            1   0.235   0.681  data<11>_MLTSRCEDGELogicTrst9 (data<11>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_11_IOBUF (data<11>)
+    ----------------------------------------
+    Total                     11.670ns (4.919ns logic, 6.751ns route)
+                                       (42.2% logic, 57.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uart_txpop'
+  Total number of paths / destination ports: 37 / 4
+-------------------------------------------------------------------------
+Offset:              11.838ns (Levels of Logic = 7)
+  Source:            uart_txfifo_outpointer_1 (FF)
+  Destination:       data<11> (PAD)
+  Source Clock:      uart_txpop rising
+
+  Data Path: uart_txfifo_outpointer_1 to data<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            43   0.525   1.932  uart_txfifo_outpointer_1 (uart_txfifo_outpointer_1)
+     LUT4:I1->O            1   0.235   0.682  uart_txfifo_outpointer[3]_uart_txfifo_inpointer[3]_LessThan_162_o11 (uart_txfifo_outpointer[3]_uart_txfifo_inpointer[3]_LessThan_162_o1)
+     LUT5:I4->O            1   0.254   1.137  uart_txfifo_outpointer[3]_uart_txfifo_inpointer[3]_LessThan_162_o12 (uart_txfifo_outpointer[3]_uart_txfifo_inpointer[3]_LessThan_162_o)
+     LUT6:I0->O            1   0.254   0.910  data<11>_MLTSRCEDGELogicTrst3_SW0 (N237)
+     LUT6:I3->O            1   0.235   0.682  data<11>_MLTSRCEDGELogicTrst3 (data<11>_MLTSRCEDGELogicTrst2)
+     LUT6:I5->O            1   0.254   0.910  data<11>_MLTSRCEDGELogicTrst4 (data<11>_MLTSRCEDGELogicTrst3)
+     LUT6:I3->O            1   0.235   0.681  data<11>_MLTSRCEDGELogicTrst9 (data<11>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_11_IOBUF (data<11>)
+    ----------------------------------------
+    Total                     11.838ns (4.904ns logic, 6.934ns route)
+                                       (41.4% logic, 58.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dividerbit_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            cpuclock_1 (LATCH)
+  Destination:       cpuclock (PAD)
+  Source Clock:      dividerbit_1 rising
+
+  Data Path: cpuclock_1 to cpuclock
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  cpuclock_1 (cpuclock_1)
+     OBUF:I->O                 2.912          cpuclock_OBUF (cpuclock)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuclock_OBUF'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.202ns (Levels of Logic = 1)
+  Source:            internalreset (FF)
+  Destination:       notcpureset (PAD)
+  Source Clock:      cpuclock_OBUF rising
+
+  Data Path: internalreset to notcpureset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   0.765  internalreset (internalreset)
+     OBUFT:T->O                2.912          notcpureset_OBUFT (notcpureset)
+    ----------------------------------------
+    Total                      4.202ns (3.437ns logic, 0.765ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uart_baudclock'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            tx (FF)
+  Destination:       tx (PAD)
+  Source Clock:      uart_baudclock rising
+
+  Data Path: tx to tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.525   0.681  tx (tx_OBUF)
+     OBUF:I->O                 2.912          tx_OBUF (tx)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1924 / 27
+-------------------------------------------------------------------------
+Delay:               14.575ns (Levels of Logic = 9)
+  Source:            addr<5> (PAD)
+  Destination:       data<7> (PAD)
+
+  Data Path: addr<5> to data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           255   1.328   2.887  addr_5_IBUF (addr_5_IBUF)
+     LUT6:I0->O            1   0.254   0.000  SF0_G (N53)
+     MUXF7:I1->O           5   0.175   1.296  SF0 (SF0)
+     LUT6:I0->O            1   0.254   0.958  Mram_addr[9]_GND_6_o_wide_mux_86_OUT93127 (Mram_addr[9]_GND_6_o_wide_mux_86_OUT93126)
+     LUT6:I2->O            1   0.254   0.910  Mram_addr[9]_GND_6_o_wide_mux_86_OUT931210 (Mram_addr[9]_GND_6_o_wide_mux_86_OUT93129)
+     LUT6:I3->O            1   0.235   1.137  Mram_addr[9]_GND_6_o_wide_mux_86_OUT931221 (Mram_addr[9]_GND_6_o_wide_mux_86_OUT931220)
+     LUT6:I0->O            1   0.254   0.790  Mram_addr[9]_GND_6_o_wide_mux_86_OUT931232 (addr[9]_GND_6_o_wide_mux_86_OUT<7>)
+     LUT6:I4->O            1   0.250   0.681  data<7>_MLTSRCEDGELogicTrst4 (data<7>_MLTSRCEDGE)
+     IOBUF:I->IO               2.912          data_7_IOBUF (data<7>)
+    ----------------------------------------
+    Total                     14.575ns (5.916ns logic, 8.659ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clk                  |    6.107|         |         |         |
+cpuclock_OBUF        |    4.451|         |         |         |
+notas                |         |    6.175|         |         |
+rnotw_notuds_AND_13_o|         |    2.543|         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuclock_OBUF
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+cpuclock_OBUF        |    5.257|         |         |         |
+rnotw_notuds_AND_13_o|         |    5.503|         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dividerbit_1
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clk                  |    1.685|         |         |         |
+rnotw_notuds_AND_13_o|         |    1.750|         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock notlwe_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+notas          |         |    3.177|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock notuwe_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cpuclock_OBUF  |    4.451|         |         |         |
+notas          |         |    4.155|         |         |
+notuwe_OBUF    |    4.851|         |         |         |
+uart_txpop     |    5.160|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rnotw_notuds_AND_12_o_inv
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+cpuclock_OBUF            |    4.451|         |         |         |
+notas                    |         |    5.340|         |         |
+rnotw_notuds_AND_12_o_inv|    4.601|         |         |         |
+uart_rxpush              |    4.553|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rnotw_notuds_AND_13_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cpuclock_OBUF  |         |         |    4.451|         |
+notas          |         |         |    5.050|         |
+notuwe_OBUF    |         |         |    3.974|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uart_baudclock
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+cpuclock_OBUF            |    4.451|         |         |         |
+notuwe_OBUF              |    5.834|         |         |         |
+rnotw_notuds_AND_12_o_inv|    6.224|         |         |         |
+rnotw_notuds_AND_13_o    |         |    4.495|         |         |
+uart_baudclock           |    4.511|         |         |         |
+uart_rxpush              |    6.059|         |         |         |
+uart_txpop               |    5.707|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uart_rxpush
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+cpuclock_OBUF            |    4.451|         |         |         |
+rnotw_notuds_AND_12_o_inv|    5.222|         |         |         |
+uart_baudclock           |    3.519|         |         |         |
+uart_rxpush              |    4.900|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uart_txpop
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cpuclock_OBUF  |    4.451|         |         |         |
+notuwe_OBUF    |    4.630|         |         |         |
+uart_baudclock |    3.021|         |         |         |
+uart_txpop     |    4.777|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.24 secs
+ 
+--> 
+
+
+Total memory usage is 134172 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

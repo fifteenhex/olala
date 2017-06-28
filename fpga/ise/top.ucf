@@ -1,0 +1,87 @@
+NET "*" IOSTANDARD = LVCMOS33;
+
+NET "leds[0]" LOC = P138;
+NET "leds[1]" LOC = P137;
+NET "leds[2]" LOC = P134;
+NET "leds[3]" LOC = P133;
+NET "leds[4]" LOC = P120;
+NET "leds[5]" LOC = P119;
+NET "leds[6]" LOC = P118;
+NET "leds[7]" LOC = P117;
+
+NET "clk" PERIOD = 20ns;
+NET "clk" LOC = P50;
+NET "cpuclock" PERIOD = 80ns;
+NET "cpuclock" LOC = P94;
+NET "sysreset" LOC = P132;
+NET "button" LOC = P131;
+
+NET "notextramcs" 	LOC = P41;
+NET "notuwe"		LOC = P45;
+NET "notlwe"		LOC = P44;
+NET "notoe" 		LOC = P43;
+
+NET "tx"	LOC	= P46;
+#NET "tx"	LOC	= P102;
+NET "rx" LOC 	= P47;
+NET "baudout" LOC = P101;
+
+#m68k signals
+NET "notcpuhalt"	LOC = P114;
+NET "notcpureset"	LOC = P121;
+NET "dtack" LOC = P93;
+NET "notbg" LOC = P92;
+NET "notbr" LOC = P95;
+NET "ipl[0]" LOC = P126;
+NET "ipl[1]" LOC = P127;
+NET "ipl[2]" LOC = P123;
+
+#bus signals
+NET "notas"		LOC = P85;
+NET "notuds"	LOC = P84;
+NET "notlds"	LOC = P88;
+NET "rnotw"		LOC = P87;
+NET "notberr"	LOC = P124;
+NET "notavec"	LOC = P116;
+
+NET "addr[22]"	LOC = P29;
+NET "addr[21]"	LOC = P27;
+NET "addr[20]"	LOC = P26;
+NET "addr[19]"	LOC = P24;
+NET "addr[18]"	LOC = P23;
+NET "addr[17]"	LOC = P22;
+NET "addr[16]"	LOC = P21;
+NET "addr[15]"	LOC = P17;
+NET "addr[14]"	LOC = P16;
+NET "addr[13]"	LOC = P15;
+NET "addr[12]"	LOC = P14;
+NET "addr[11]"	LOC = P12;
+NET "addr[10]"	LOC = P11;
+NET "addr[9]"	LOC = P10;
+NET "addr[8]"	LOC = P9;
+NET "addr[7]"	LOC = P8;
+NET "addr[6]"	LOC = P7;
+NET "addr[5]"	LOC = P6;
+NET "addr[4]"	LOC = P5;
+NET "addr[3]"	LOC = P2;
+NET "addr[2]"	LOC = P1;
+NET "addr[1]"	LOC = P143;
+NET "addr[0]"	LOC = P142;
+
+NET "data[15]" LOC = P30;
+NET "data[14]" LOC = P32;
+NET "data[13]" LOC = P33;
+NET "data[12]" LOC = P34;
+NET "data[11]" LOC = P35;
+NET "data[10]" LOC = P40;
+NET "data[9]"	LOC = P67;
+NET "data[8]"	LOC = P66;
+
+NET "data[7]"	LOC = P75;
+NET "data[6]"	LOC = P74;
+NET "data[5]"	LOC = P79;
+NET "data[4]"	LOC = P78;
+NET "data[3]"	LOC = P81;
+NET "data[2]"	LOC = P80;
+NET "data[1]"	LOC = P83;
+NET "data[0]"	LOC = P82;

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/daniel/hardware/OLALA/fpga/ise/Top.ncd
+OUTFILE=/home/daniel/hardware/OLALA/fpga/ise/Top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/daniel/hardware/OLALA/fpga/ise
+LICENSE=WebPack
+USER_INFO=204274178_0_0_637

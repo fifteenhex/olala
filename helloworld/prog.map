@@ -1,0 +1,74 @@
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 main.o (symbol from plugin)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000000100000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD crt.o
+LOAD main.o
+LOAD /tmp/cc85Lyot.ltrans0.ltrans.o
+LOAD /home/daniel/coding/musasim/toolchains/inst/m68k-elf/lib/gcc/m68k-elf/5.2.0/m68000/libgcc.a
+LOAD /home/daniel/coding/musasim/toolchains/inst/m68k-elf/lib/gcc/m68k-elf/5.2.0/../../../../m68k-elf/lib/m68000/libc.a
+LOAD /home/daniel/coding/musasim/toolchains/inst/m68k-elf/lib/gcc/m68k-elf/5.2.0/m68000/libgcc.a
+                0x0000000000000000                . = 0x0
+
+.startup        0x0000000000000000      0x120
+ *(.text)
+ .text          0x0000000000000000      0x11e crt.o
+ *fill*         0x000000000000011e        0x2 
+ .text          0x0000000000000120        0x0 /tmp/cc85Lyot.ltrans0.ltrans.o
+                0x0000000000000120                . = ALIGN (0x2)
+
+.text           0x0000000000000120       0x60
+ *(.text*)
+ .text.startup  0x0000000000000120       0x4e /tmp/cc85Lyot.ltrans0.ltrans.o
+                0x0000000000000120                main
+ *(.rodata*)
+ .rodata.str1.1
+                0x000000000000016e        0xf /tmp/cc85Lyot.ltrans0.ltrans.o
+ *(.eh_frame)
+                0x0000000000000180                . = ALIGN (0x4)
+ *fill*         0x000000000000017d        0x3 
+                0x0000000000000180                _text_end = .
+
+.data           0x0000000000000180        0x0
+                0x0000000000000180                _data_start = .
+ *(.data*)
+ .data          0x0000000000000180        0x0 crt.o
+ .data          0x0000000000000180        0x0 /tmp/cc85Lyot.ltrans0.ltrans.o
+                0x0000000000000180                . = ALIGN (0x4)
+                0x0000000000000180                _data_end = .
+
+.bss            0x0000000000000180        0x0
+                0x0000000000000180                _bss_start = .
+ *(.bss*)
+ .bss           0x0000000000000180        0x0 crt.o
+ .bss           0x0000000000000180        0x0 /tmp/cc85Lyot.ltrans0.ltrans.o
+                0x0000000000000180                . = ALIGN (0x4)
+                0x0000000000000180                _bss_end = .
+                0x0000000000000180                _end = .
+                0x0000000000000180                end = .
+OUTPUT(prog.elf elf32-m68k)
+
+.startup        0x0000000000000000        0x0
+ .startup       0x0000000000000000        0x0 crt.o
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 /tmp/cc85Lyot.ltrans0.ltrans.o
+                                         0x12 (size before relaxing)
+
+Cross Reference Table
+
+Symbol                                            File
+_bss_end                                          crt.o
+_bss_start                                        crt.o
+main                                              /tmp/cc85Lyot.ltrans0.ltrans.o
+                                                  main.o (symbol from plugin)
+                                                  crt.o

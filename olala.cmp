@@ -1,0 +1,122 @@
+Cmp-Mod V01 Created by CvPcb (25-Oct-2014 BZR 4029)-stable date = Mon 11 May 2015 23:59:14 JST
+
+BeginCmp
+TimeStamp = /554E1DB3;
+Reference = C1;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554CD74E;
+Reference = C2;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554CD73F;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554CD5CB;
+Reference = C4;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554CD5DA;
+Reference = C5;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554E2142;
+Reference = C6;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554F0AD1;
+Reference = C7;
+ValeurCmp = C;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C776F;
+Reference = P1;
+ValeurCmp = CONN_20X2;
+IdModule  = PIN_ARRAY_20X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C777E;
+Reference = P2;
+ValeurCmp = CONN_20X2;
+IdModule  = PIN_ARRAY_20X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /554E1B83;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554E1B92;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5550C317;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5550C308;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /554CBFC6;
+Reference = U1;
+ValeurCmp = 68SEC000;
+IdModule  = qfp6408mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C6F61;
+Reference = U2;
+ValeurCmp = 2MSRAM;
+IdModule  = tsop244;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C6F70;
+Reference = U3;
+ValeurCmp = 2MSRAM;
+IdModule  = tsop244;
+EndCmp
+
+BeginCmp
+TimeStamp = /554E1B74;
+Reference = U4;
+ValeurCmp = LMZ10501;
+IdModule  = usip8;
+EndCmp
+
+EndListe

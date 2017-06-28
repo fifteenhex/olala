@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/daniel/hardware/OLALA/fpga/ise/tb_Top_isim_beh.exe" -prj "/home/daniel/hardware/OLALA/fpga/ise/tb_Top_beh.prj" "work.tb_Top" 

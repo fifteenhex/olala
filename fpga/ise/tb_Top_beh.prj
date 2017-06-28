@@ -1,0 +1,3 @@
+vhdl work "../myhdl/pck_myhdl_090.vhd"
+vhdl work "../myhdl/Top.vhd"
+vhdl work "tb_Top.vhd"

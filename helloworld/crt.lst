@@ -1,0 +1,111 @@
+68K GAS  crt.s 			page 1
+
+
+   1               	.extern _bss_start
+   2               	.extern _bss_end
+   3               	
+   4               	.section .startup
+   5               	
+   6               	.text
+   7               	
+   8               	vectors:
+   9 0000 0010 0000 		dc.l	0x100000	/* Initial stack pointer */
+  10 0004 0000 0000 		dc.l	start		/* Start of program Code */
+  11 0008 0000 0000 	        dc.l    unhandledint	/* Bus error */
+  12 000c 0000 0000 	        dc.l    unhandledint	/* Address error */
+  13 0010 0000 0000 	        dc.l    unhandledint	/* Illegal instruction */
+  14 0014 0000 0000 	        dc.l    unhandledint	/* Division by zero */
+  15 0018 0000 0000 	        dc.l    unhandledint	/* CHK exception */
+  16 001c 0000 0000 	        dc.l    unhandledint	/* TRAPV exception */
+  17 0020 0000 0000 	        dc.l    unhandledint	/* Privilage violation */
+  18 0024 0000 0000 	        dc.l    unhandledint	/* TRACE exception */
+  19 0028 0000 0000 	        dc.l    unhandledint	/* Line-A emulator */
+  20 002c 0000 0000 	        dc.l    unhandledint	/* Line-F emulator */
+  21 0030 0000 0000 	        dc.l    unhandledint	/* Reserved (NOT USED) */
+  22 0034 0000 0000 	        dc.l    unhandledint	/* Co-processor protocol violation */
+  23 0038 0000 0000 	        dc.l    unhandledint                                                             /* Format 
+  24 003c 0000 0000 	        dc.l    unhandledint                                                             /* Uniniti
+  25 0040 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  26 0044 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  27 0048 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  28 004c 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  29 0050 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  30 0054 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  31 0058 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  32 005c 0000 0000 	        dc.l    unhandledint                                                             /* Reserve
+  33 0060 0000 0000 	        dc.l    unhandledint                                                             /* Spuriou
+  34 0064 0000 0000 	        dc.l    unhandledint	/* IRQ Level 1 */
+  35 0068 0000 0000 	        dc.l    unhandledint	/* IRQ Level 2 */
+  36 006c 0000 0000 	        dc.l    unhandledint	/* IRQ Level 3 */
+  37 0070 0000 0000 	        dc.l    unhandledint	/* IRQ Level 4 */
+  38 0074 0000 0000 	        dc.l    unhandledint	/* IRQ Level 5 */
+  39 0078 0000 0000 	        dc.l    unhandledint	/* IRQ Level 6 */
+  40 007c 0000 0000 	        dc.l    unhandledint	/* IRQ Level 7 */
+  41 0080 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  42 0084 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  43 0088 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  44 008c 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  45 0090 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  46 0094 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  47 0098 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  48 009c 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  49 00a0 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  50 00a4 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #0
+  51 00a8 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #1
+  52 00ac 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #1
+  53 00b0 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #1
+  54 00b4 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #1
+  55 00b8 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #1
+  56 00bc 0000 0000 	        dc.l    unhandledint                                                             /* TRAP #1
+  57 00c0 0000 0000 	        dc.l    unhandledint                                                             /* (FP) Br
+68K GAS  crt.s 			page 2
+
+
+  58 00c4 0000 0000 	        dc.l    unhandledint                                                             /* (FP) In
+  59 00c8 0000 0000 	        dc.l    unhandledint                                                             /* (FP) Di
+  60 00cc 0000 0000 	        dc.l    unhandledint                                                             /* (FP) Un
+  61 00d0 0000 0000 	        dc.l    unhandledint                                                             /* (FP) Op
+  62 00d4 0000 0000 	        dc.l    unhandledint                                                             /* (FP) Ov
+  63 00d8 0000 0000 	        dc.l    unhandledint                                                             /* (FP) Si
+  64 00dc 0000 0000 	        dc.l    unhandledint	/* (FP) Unimplemented Data Type */
+  65 00e0 0000 0000 	        dc.l    unhandledint	/* MMU Configuration Error */
+  66 00e4 0000 0000 	        dc.l    unhandledint	/* MMU Illegal Operation Error */
+  67 00e8 0000 0000 	        dc.l    unhandledint	/* MMU Access Violation Error */
+  68 00ec 0000 0000 	        dc.l    unhandledint	/* Reserved (NOT USED) */
+  69 00f0 0000 0000 	        dc.l    unhandledint	/* Reserved (NOT USED) */
+  70 00f4 0000 0000 	        dc.l    unhandledint	/* Reserved (NOT USED) */
+  71 00f8 0000 0000 	        dc.l    unhandledint	/* Reserved (NOT USED) */
+  72 00fc 0000 0000 	        dc.l    unhandledint	/* Reserved (NOT USED) */
+  73               	
+  74               	start:
+  75               	
+  76               	clearbss:
+  77               		#clear bss
+  78 0100 41F9 0000 		lea.l	_bss_start,%a0	/* Clear bss */
+  78      0000 
+  79 0106 203C 0000 		move.l	#_bss_end,%d0
+  79      0000 
+  80 010c B1C0      	1:	cmp.l	%d0,%a0
+  81 010e 6704      		beq.s	2f
+  82 0110 4218      		clr.b	(%a0)+
+  83 0112 60F8      		bra.s	1b
+  84               	2:
+  85               	
+  86 0114 4EF9 0000 		jmp	main
+  86      0000 
+  87               	
+  88               	unhandledint:
+  89 011a 4EFA FFFE 		jmp unhandledint
+68K GAS  crt.s 			page 3
+
+
+DEFINED SYMBOLS
+               crt.s:8      .text:0000000000000000 vectors
+               crt.s:74     .text:0000000000000100 start
+               crt.s:88     .text:000000000000011a unhandledint
+               crt.s:76     .text:0000000000000100 clearbss
+
+UNDEFINED SYMBOLS
+_bss_start
+_bss_end
+main
